@@ -4,31 +4,37 @@ import {
   Button,
   Text
 } from 'react-native';
+import { increase, decrease } from "../actions/count";
+import { connect } from "react-redux";
 
 class Home extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      counter: 0
-    }
-  }
-  
+
   render() {
     return (
       <View style= {{ alignItems: 'center', justifyContent: 'center' }}>
         <Button
           title="increment"
-          onPress={() => this.setState({ counter: this.state.counter += 1})}
+          onPress={() => this.props.increase(this.props.counter)}
         />
-        <Text style={{ fontSize: 50 }}>{this.state.counter}</Text>
+        <Text style={{ fontSize: 50 }}>{this.props.counter}</Text>
         <Button
           title="decrement"
-          onPress={() => this.setState({ counter: this.state.counter -= 1 })}
+          onPress={() => this.props.decrease(this.props.counter)}
         />
       </View>
     );
   }
-
 };
 
-export default Home
+function mapStateToProps(state){
+  return{
+    counter: state.countReducer
+  }
+}
+
+const mapDispatchToProps = {
+  increase,
+  decrease
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
