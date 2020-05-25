@@ -13,7 +13,7 @@ import GeneralList from "../components/itemlist";
 class Home extends Component {
   render() {
     return (
-      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
         <Button
           title="increment"
           onPress={() => {
@@ -33,7 +33,7 @@ class Home extends Component {
         <FlatList
           data={this.props.list}
           extraData={this.props.list}
-          renderItem={({ index, item }) => <GeneralList index={index} item={item} />}
+          renderItem={({ index, item }) => <GeneralList index={index} item={item} navigation={this.props.navigation} />}
           keyExtractor={(item, index) => index.toString()}
         />
       </View>

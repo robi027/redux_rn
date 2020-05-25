@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import Home from './src/screens/home';
+import Navigator from './src/navigation';
 import {name as appName} from './app.json';
 
 import React from 'react';
@@ -16,7 +16,7 @@ const store = createStore(reducers)
 const AppContainer = () => {
   return(
     <Provider store={store}>
-      <Home />
+      <Navigator />
     </Provider>
   )
 }
