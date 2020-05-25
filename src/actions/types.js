@@ -1,2 +1,4 @@
 export const INCREMENT = "INCREMENT"
 export const DECREMENT = "DECREMENT"
+export const INCREMENTLIST = "INCREMENTLIST"
+export const DECREMENTLIST = "DECREMENTLIST"

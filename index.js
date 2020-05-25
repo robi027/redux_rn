@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import Home from './src/components/home';
+import Home from './src/screens/home';
 import {name as appName} from './app.json';
 
 import React from 'react';
