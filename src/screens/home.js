@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import GeneralList from "../components/itemlist";
 
 class Home extends Component {
+
   render() {
     return (
       <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
