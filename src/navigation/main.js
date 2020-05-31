@@ -1,5 +1,5 @@
 import React from "react"
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator, CardStyleInterpolators, TransitionSpecs } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "../screens/home";
 import Detail from "../screens/detail";
@@ -12,7 +12,7 @@ const MainNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator headerMode="none" initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="Detail" component={Detail} options={{ cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} />
         <Stack.Screen name="Animate" component={Animate} />
       </Stack.Navigator>
     </NavigationContainer>
