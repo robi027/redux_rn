@@ -14,8 +14,8 @@ export default class Animate extends Component {
   }
 
   componentDidMount() {
-    // this._timing()
-    // this._spring()
+    this._timing()
+    this._spring()
     this._decay()
   }
 
@@ -56,13 +56,13 @@ export default class Animate extends Component {
           <Text>
             Timing
           </Text>
-          {/* {this.renderTiming()} */}
+          {this.renderTiming()}
         </View>
         <View>
           <Text>
             Spring
           </Text>
-          {/* {this.renderSpring()} */}
+          {this.renderSpring()}
         </View>
         <View>
           <Text>

@@ -6,7 +6,12 @@ function animate(from){
   from.navigate("Animate")
 }
 
+function chat(from){
+  from.navigate("Chat")
+}
+
 export default {
   detail,
-  animate
+  animate,
+  chat
 }
